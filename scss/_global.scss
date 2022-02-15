@@ -1,0 +1,273 @@
+body {
+    background: $mainBg;
+    font-family: $fontMain;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: $colorWhite;
+    &.state-locked {
+        overflow: hidden;
+    }
+}
+
+.container {
+    max-width: $containerWidth;
+    width: 100%;
+    margin: 0 auto;
+    padding: $containerPadding;
+
+    @media (max-width: $breakpoint992) {
+        max-width: 970px;
+    }
+
+    @media (max-width: $breakpoint768) {
+        max-width: 750px;
+    }
+
+    @media (max-width: $breakpoint480) {
+        max-width: none;
+    }
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+}
+
+strong {
+    font-weight: 700;
+}
+
+.btn {
+    display: inline-block;
+    background: $colorBlue;
+    border: 1px solid $colorWhite;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 13px;
+    line-height: 16px;
+    font-family: $fontMain;
+    font-weight: 400;
+    color: $colorWhite;
+    padding: 12px 31.5px;
+    text-transform: uppercase;
+    text-align: center;
+    transition: 0.3s all ease;
+
+    &:hover {
+        background: #3183b9;
+    }
+}
+
+.btn__white {
+    background: $colorWhite;
+    border-color: #6f6d7b;
+    color: #2a2b30;
+
+    &:hover {
+        color: $colorWhite;
+    }
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 43px;
+    color: $colorWhite;
+    text-transform: uppercase;
+
+    @media (max-width: $breakpoint768) {
+        font-size: 30px;
+        line-height: 38px;
+    }
+
+    @media (max-width: $breakpoint480) {
+        font-size: 22px;
+        line-height: 28px;
+    }
+}
+
+.formControl {
+    display: block;
+    width: 100%;
+    padding: 12px 10px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #272733;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid $colorWhite;
+    box-sizing: border-box;
+    border-radius: 3px;
+    transition: 0.3s all ease;
+
+    &:hover,
+    &:focus {
+        background: $colorWhite;
+    }
+
+    @media (max-width: $breakpoint768) {
+        padding: 8px 10px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
+::-webkit-input-placeholder {
+    color: #272733;
+}
+
+::-moz-placeholder {
+    color: #272733;
+}
+
+:-ms-input-placeholder {
+    color: #272733;
+}
+
+:-moz-placeholder {
+    color: #272733;
+}
+
+.custom-select {
+    width: 100%;
+    position: relative;
+    select {
+        display: none;
+    }
+}
+
+.select__selected {
+    padding: 12px 10px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #272733;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid $colorWhite;
+    box-sizing: border-box;
+    border-radius: 3px;
+    cursor: pointer;
+    z-index: 99;
+
+    @media (max-width: $breakpoint768) {
+        padding: 8px 10px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        margin-top: -5px;
+        border: solid $colorBlack;
+        border-width: 0 2px 2px 0;
+        padding: 3px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transition: 0.3s all ease;
+    }
+
+    &.arrowanim {
+        background: rgba(61, 64, 80, 0.85);
+        border-color: rgba(61, 64, 80, 0.85);
+        border-radius: 3px 3px 0px 0px;
+        color: $colorWhite;
+        &::after {
+            border-color: $colorWhite;
+            margin-top: -1px;
+            transform: rotate(-135deg);
+        }
+    }
+}
+
+.select__item {
+    font-size: 18px;
+    padding: 8px 10px;
+    color: $colorWhite;
+    cursor: pointer;
+
+    @media (max-width: $breakpoint480) {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    &:hover {
+        color: #42a9ed;
+    }
+}
+
+.select__dropdown {
+    background: rgba(39, 39, 51, 1);
+    border: 1px solid #3d4050;
+    box-sizing: border-box;
+    border-radius: 0 0 3px 3px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 180px;
+    padding: 5px 0;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    width: 100%;
+    z-index: 100;
+
+    &::-webkit-scrollbar {
+        width: 7px;
+    }
+    
+    &::-webkit-scrollbar-track {
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: $colorBlue;
+        border-radius: 3px;
+    }
+
+    &-hide {
+        display: none;
+    }
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.file__upload {
+
+    &-field {
+        display: block;
+        background: $colorWhite;
+        border: 2px solid $colorBlue;
+        font-size: 15px;
+        line-height: 18px;
+        font-weight: 600;
+        color: #272733;
+        box-sizing: border-box;
+        border-radius: 3px;
+        text-transform: uppercase;
+        padding: 13px 10px;
+        text-align: center;
+        width: 100%;
+        cursor: pointer;
+        transition: 0.3s all ease;
+
+        @media (max-width: $breakpoint768) {
+            padding: 8px 10px;
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        &:hover {
+            background: $colorBlue;
+            color: $colorWhite;
+        }
+    }
+
+    &-icon {
+        display: inline-block;
+        margin-right: 10px;
+    }
+}

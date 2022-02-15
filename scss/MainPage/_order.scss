@@ -1,0 +1,283 @@
+.section__order {
+    background: url("../img/order-bg.jpg") repeat-x top left;
+    padding: 120px 0 120px;
+
+    @media (max-width: $breakpoint992) {
+        padding: 90px 0 130px;
+    }
+
+    @media (max-width: $breakpoint768) {
+        padding: 70px 0 110px;
+    }
+
+    @media (max-width: $breakpoint480) {
+        padding: 50px 0 80px;
+    }
+}
+
+.order {
+    &__title {
+        margin-bottom: 30px;
+        text-align: center;
+
+        span {
+            color: $colorBlue;
+        }
+    }
+
+    &__subtitle {
+        font-size: 18px;
+        line-height: 22px;
+        color: $colorGray;
+        margin-bottom: 80px;
+        text-align: center;
+
+        @media (max-width: $breakpoint768) {
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: $breakpoint480) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__steps {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 55px;
+        margin-bottom: 20px;
+
+        @media (max-width: $breakpoint992) {
+            padding: 0 35px;
+        }
+
+        @media (max-width: $breakpoint768) {
+            padding: 0;
+        }
+
+        @media (max-width: $breakpoint480) {
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .order__step-title {
+            display: none;
+
+            @media (max-width: $breakpoint480) {
+                flex-direction: column;
+                display: block;
+            }
+        }
+    }
+
+    &__step {
+        overflow: hidden;
+        justify-content: center;
+
+        @media (max-width: $breakpoint768) {
+            display: flex;
+            align-items: center;
+            flex: 0 1 20%;
+        }
+
+        @media (max-width: $breakpoint480) {
+            flex-direction: column;
+            flex: 0 1 50%;
+            margin-bottom: 30px;
+        }
+
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: $colorBlue;
+            border: 5px solid #286690;
+            box-sizing: border-box;
+            width: 100px;
+            height: 100px;
+
+            @media (max-width: $breakpoint992) {
+                width: 85px;
+                height: 85px;
+            }
+
+            @media (max-width: $breakpoint768) {
+                width: 70px;
+                height: 70px;
+            }
+
+            @media (max-width: $breakpoint480) {
+                margin-bottom: 20px;
+            }
+
+            img {
+                @media (max-width: $breakpoint992) {
+                    max-width: 45px;
+                }
+
+                @media (max-width: $breakpoint768) {
+                    max-width: 35px;
+                }
+            }
+        }
+
+        &-dots {
+            display: flex;
+            justify-content: space-around;
+            flex: 1;
+
+            @media (max-width: $breakpoint768) {
+                display: none;
+            }
+
+            span {
+                display: block;
+                background: #c4c4c4;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+            }
+        }
+
+        &-titles {
+            display: flex;
+            margin-bottom: 85px;
+
+            @media (max-width: $breakpoint768) {
+                margin-bottom: 50px;
+            }
+
+            @media (max-width: $breakpoint480) {
+                display: none;
+            }
+        }
+
+        &-title {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            flex: 0 1 20%;
+            box-sizing: border-box;
+            padding: 0 10px;
+            overflow: hidden;
+
+            @media (max-width: $breakpoint768) {
+                font-size: 14px;
+                line-height: 18px;
+            }
+
+            @media (max-width: $breakpoint480) {
+                display: none;
+            }
+        }
+    }
+
+    &__form {
+        &-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -30px;
+
+            @media (max-width: $breakpoint768) {
+                margin-left: 0;
+            }
+
+            &-btn {
+                justify-content: center;
+                padding-top: 20px;
+
+                @media (max-width: $breakpoint768) {
+                    padding-top: 0;
+                }
+            }
+        }
+
+        &-col {
+            flex: 0 1 33.3333%;
+            padding-left: 30px;
+            margin-bottom: 30px;
+            box-sizing: border-box;
+
+            @media (max-width: $breakpoint768) {
+                flex: 1 1 100%;
+                padding-left: 0;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__range {
+        flex: 0 1 66.6666%; 
+
+        @media (max-width: $breakpoint768) {
+            flex: 1 1 100%;
+        }
+
+        &-head {
+            display: flex;
+            justify-content: space-between;
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 10px;
+
+            @media (max-width: $breakpoint768) {
+                font-size: 14px;
+                line-height: 18px;
+            }
+        }
+
+        &-valueWrap {
+            display: flex;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        &-slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid $colorWhite;
+            border-radius: 3px;
+            outline: none;
+            -webkit-transition: 0.3s;
+            transition: opacity 0.3s;
+
+            &:hover {
+                opacity: 1;
+            }
+            
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 24px;
+                height: 24px;
+                background: #42A9ED;
+                border: 3px solid #286690;
+                box-sizing: border-box;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+            
+            &::-moz-range-thumb {
+                width: 24px;
+                height: 24px;
+                background: #42A9ED;
+                border: 3px solid #286690;
+                box-sizing: border-box;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__btn {
+        font-size: 15px;
+        line-height: 18px;
+        font-weight: 600;
+        padding: 14px 10px;
+        width: 100%;
+    }
+
+}

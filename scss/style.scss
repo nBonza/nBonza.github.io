@@ -1,0 +1,18 @@
+@import "vars";
+@import "reset";
+@import "fonts";
+@import "global";
+
+@import "header";
+@import "footer";
+
+@import "./MainPage/hero";
+@import "./MainPage/order";
+
+.content {
+    padding-top: 100px;
+
+    @media (max-width: $breakpoint480) {
+        padding-top: 80px;
+    }
+}

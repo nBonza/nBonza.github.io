@@ -1,0 +1,121 @@
+.section {
+    &__hero {
+        background: url('../img/hero-bg.jpg') no-repeat top center;
+        background-size: cover;
+        padding: 103px 0 205px;
+
+        @media (max-width: $breakpoint992) {
+            padding: 90px 0 130px;
+        }
+    
+        @media (max-width: $breakpoint768) {
+            padding: 70px 0 110px;
+        }
+    
+        @media (max-width: $breakpoint480) {
+            padding: 50px 0 80px;
+        }
+    }
+}
+
+.hero {
+    display: flex;
+
+    &__item {
+        flex: 0 1 820px;
+
+        @media (max-width: $breakpoint992) {
+            flex: 0 1 620px;
+        }
+
+        @media (max-width: $breakpoint768) {
+            flex: 1 1 100%;
+        }
+
+        &-title {
+            color: $colorBlack;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 58px;
+            margin-bottom: 90px;
+
+            @media (max-width: $breakpoint992) {
+                font-size: 40px;
+                line-height: 50px;
+                margin-bottom: 60px;
+            }
+
+            @media (max-width: $breakpoint768) {
+                font-size: 34px;
+                line-height: 40px;
+                margin-bottom: 50px;
+            }
+
+            @media (max-width: $breakpoint480) {
+                font-size: 22px;
+                line-height: 28px;
+                margin-bottom: 30px;
+            }
+
+            span {
+                color: $colorBlue;
+            }
+        }
+
+        &-text {
+            font-size: 20px;
+            line-height: 24px;
+            color: $colorBlack;
+            margin-bottom: 80px;
+
+            @media (max-width: $breakpoint992) {
+                font-size: 18px;
+                line-height: 22px;
+                margin-bottom: 50px;
+            }
+
+            @media (max-width: $breakpoint480) {
+                font-size: 16px;
+                line-height: 20px;
+                margin-bottom: 40px;
+            }
+
+            ul {
+                margin-top: 10px;
+                li {
+                    margin-bottom: 5px;
+
+                    &::before {
+                        content: "-";
+                        display: inline-block;
+                        margin: 0 10px;
+                    }
+                }
+            }
+        }
+
+        &-buttons {
+            display: flex;
+
+            @media (max-width: $breakpoint480) {
+                flex-direction: column;
+            }
+        }
+    }
+    &__btn {
+        width: 183px;
+
+        @media (max-width: $breakpoint480) {
+            width: 100%;
+        }
+
+        &:last-child {
+            margin-left: 30px;
+
+            @media (max-width: $breakpoint480) {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+        }
+    }
+}
