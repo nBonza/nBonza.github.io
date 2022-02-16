@@ -94,8 +94,8 @@ h6 {
     font-weight: 600;
     src: url("../fonts/Lato-Semibold.eot");
     src: local(""), url("../fonts/Lato-Semibold.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/Lato-Semibold.woff2") format("woff2"), url("../fonts/Lato-Semibold.woff") format("woff"),
-    url("../fonts/Lato-Semibold.ttf") format("truetype"), url("../fonts/Lato-Semibold.svg#Lato") format("svg");
+        url("../fonts/Lato-Semibold.woff2") format("woff2"), url("../fonts/Lato-Semibold.woff") format("woff"),
+        url("../fonts/Lato-Semibold.ttf") format("truetype"), url("../fonts/Lato-Semibold.svg#Lato") format("svg");
 }
 
 @font-face {
@@ -104,8 +104,8 @@ h6 {
     font-weight: 800;
     src: url("../fonts/Lato-Heavy.eot");
     src: local(""), url("../fonts/Lato-Heavy.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/Lato-Heavy.woff2") format("woff2"), url("../fonts/Lato-Heavy.woff") format("woff"),
-    url("../fonts/Lato-Heavy.ttf") format("truetype"), url("../fonts/Lato-Heavy.svg#Lato") format("svg");
+        url("../fonts/Lato-Heavy.woff2") format("woff2"), url("../fonts/Lato-Heavy.woff") format("woff"),
+        url("../fonts/Lato-Heavy.ttf") format("truetype"), url("../fonts/Lato-Heavy.svg#Lato") format("svg");
 }
 
 body {
@@ -1286,6 +1286,10 @@ input[type="file"] {
     display: -ms-flexbox;
     display: flex;
     color: rgba(255, 255, 255, 0.85);
+}
+
+.order__range-percent {
+    margin-left: 5px;
 }
 
 .order__range-slider {
